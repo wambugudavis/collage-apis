@@ -10,7 +10,8 @@ class PhotoSchema extends Schema {
       table.timestamps()
       table.string('url')
       table.string('title')
-      table.integer('user_id').unsigned().references('id').inTable('users');
+      table.integer('user_id').unsigned();
+      table.foreign('user_id').references('Users.id').onDelete('cascade');
     })
   }
 

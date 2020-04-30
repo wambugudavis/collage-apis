@@ -6,7 +6,7 @@ class AuthController {
   async register({request, auth, response}) {
     let user = await User.create(request.all())
     let accessToken = await auth.generate(user)
-    return response.json({"user": user, "access_token": accessToken})
+    return response.json({"user": user, "access_token": accessToken.token})
   }
 
   async login({request, auth, response}) {
@@ -16,10 +16,11 @@ class AuthController {
       if (await auth.attempt(email, password)) {
         let user = await User.findBy('email', email)
         let accessToken = await auth.generate(user)
-        return response.json({"user": user, "access_token": accessToken})
+        return response.json({"user": user, "access_token": accessToken.token})
       }
 
     } catch (e) {
+      console.log(e);
       return response.json({message: 'User not registered!'})
     }
   }
@@ -31,6 +32,11 @@ class AuthController {
 
   async show({params}) {
     return await User.findOrFail(params.id);
+  }
+
+  async user({auth}) {
+    const user = await auth.user;
+    return {user}
   }
 
   async update({params, request, response}) {

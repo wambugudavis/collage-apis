@@ -16,8 +16,11 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
+
+Route.get('/api/photos/user', 'PhotoController.user').middleware('auth');
+Route.get('/api/photos/highlight', 'PhotoController.highlight').middleware('auth');
 Route.resource('api/photos', 'PhotoController')
-  .apiOnly()
+  // .apiOnly()
   .middleware('auth');
 
 Route.resource('api/collages', 'CollageController')
@@ -31,6 +34,7 @@ Route.resource('api/tags', 'TagController')
 Route.post('/auth/register', 'AuthController.register');
 Route.post('/auth/login', 'AuthController.login');
 Route.get('/auth/users', 'AuthController.index');
+Route.get('/auth/user', 'AuthController.user').middleware('auth');
 Route.get('/auth/users/:id', 'AuthController.show');
 Route.put('/auth/users/:id', 'AuthController.update').middleware('auth');
 Route.delete('/auth/users/:id', 'AuthController.destroy').middleware('auth');

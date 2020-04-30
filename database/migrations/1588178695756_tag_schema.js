@@ -9,7 +9,7 @@ class TagSchema extends Schema {
       table.increments()
       table.timestamps()
       table.integer('photo_id').unsigned().notNullable();
-      table.foreign('photo_id').references('Photos.id');
+      table.foreign('photo_id').references('Photos.id').onDelete('cascade');
       table.integer('collage_id').unsigned().notNullable();
       table.foreign('collage_id').references('Collages.id').onDelete('cascade');
     })

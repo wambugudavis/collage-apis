@@ -12,6 +12,7 @@ class Collage extends Model {
     return this
       .belongsToMany('App/Models/Photo')
       .pivotTable('tags')
+      .with('user')
   }
 }
 

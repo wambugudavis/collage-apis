@@ -18,6 +18,7 @@ class CollageController {
 
   async show({params, response}) {
     const collage = await Collage.findOrFail(params.id);
+    await collage.load('photos')
     return response.json(collage)
   }
 

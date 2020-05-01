@@ -1,0 +1,1194 @@
+{
+	"info": {
+		"_postman_id": "94777358-ffeb-4eca-b61d-29c73adbb2dd",
+		"name": "Collage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Photos",
+			"item": [
+				{
+					"name": "Fetch All Photos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/photos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"photos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Fetch All Photos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/photos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"photos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1564"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Apr 2020 18:59:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[{\"id\":1,\"created_at\":\"2020-04-29 18:57:48\",\"url\":\"https://images.unsplash.com/photo-1529971071135-c1982792bb96?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80\",\"title\":\"Blue Skies\",\"user\":{\"id\":1,\"username\":\"Davis Wambugu\",\"email\":\"davis@email.com\",\"location\":\"Nairobi\",\"bio\":\"I am a photographer\",\"created_at\":\"2020-04-29 18:57:10\"},\"collages\":[]},{\"id\":2,\"created_at\":\"2020-04-29 18:59:14\",\"url\":\"https://images.unsplash.com/photo-1577073315631-93a26e476fa4?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80\",\"title\":\"Darker\",\"user\":{\"id\":1,\"username\":\"Davis Wambugu\",\"email\":\"davis@email.com\",\"location\":\"Nairobi\",\"bio\":\"I am a photographer\",\"created_at\":\"2020-04-29 18:57:10\"},\"collages\":[{\"id\":2,\"title\":\"People\",\"pivot\":{\"collage_id\":2,\"photo_id\":2}},{\"id\":3,\"title\":\"Animals\",\"pivot\":{\"collage_id\":3,\"photo_id\":2}}]},{\"id\":3,\"created_at\":\"2020-04-29 19:03:15\",\"url\":\"https://images.unsplash.com/photo-1564553017457-1851a4c4ab8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=401&q=80\",\"title\":\"Sun\",\"user\":{\"id\":1,\"username\":\"Davis Wambugu\",\"email\":\"davis@email.com\",\"location\":\"Nairobi\",\"bio\":\"I am a photographer\",\"created_at\":\"2020-04-29 18:57:10\"},\"collages\":[]},{\"id\":7,\"created_at\":\"2020-04-29 19:41:46\",\"url\":\"https://images.unsplash.com/photo-1547962041-6d2d7c4bdf6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80\",\"title\":\"Selective Color\",\"user\":{\"id\":1,\"username\":\"Davis Wambugu\",\"email\":\"davis@email.com\",\"location\":\"Nairobi\",\"bio\":\"I am a photographer\",\"created_at\":\"2020-04-29 18:57:10\"},\"collages\":[]}]"
+						}
+					]
+				},
+				{
+					"name": "Fetch All User Photos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/photos/user",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"photos",
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Fetch All User Photos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/photos/user",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"photos",
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "952"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 30 Apr 2020 10:16:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[{\"id\":1,\"created_at\":\"2020-04-29 18:57:48\",\"url\":\"https://images.unsplash.com/photo-1529971071135-c1982792bb96?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80\",\"title\":\"Blue Skies\",\"collages\":[]},{\"id\":2,\"created_at\":\"2020-04-29 18:59:14\",\"url\":\"https://images.unsplash.com/photo-1577073315631-93a26e476fa4?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80\",\"title\":\"Darker\",\"collages\":[{\"id\":2,\"title\":\"People\",\"pivot\":{\"collage_id\":2,\"photo_id\":2}},{\"id\":3,\"title\":\"Animals\",\"pivot\":{\"collage_id\":3,\"photo_id\":2}}]},{\"id\":3,\"created_at\":\"2020-04-29 19:03:15\",\"url\":\"https://images.unsplash.com/photo-1564553017457-1851a4c4ab8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=401&q=80\",\"title\":\"Sun\",\"collages\":[]},{\"id\":7,\"created_at\":\"2020-04-29 19:41:46\",\"url\":\"https://images.unsplash.com/photo-1547962041-6d2d7c4bdf6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80\",\"title\":\"Selective Color\",\"collages\":[]}]"
+						},
+						{
+							"name": "Fetch All Photos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/photos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"photos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1564"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Apr 2020 18:59:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[{\"id\":1,\"created_at\":\"2020-04-29 18:57:48\",\"url\":\"https://images.unsplash.com/photo-1529971071135-c1982792bb96?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80\",\"title\":\"Blue Skies\",\"user\":{\"id\":1,\"username\":\"Davis Wambugu\",\"email\":\"davis@email.com\",\"location\":\"Nairobi\",\"bio\":\"I am a photographer\",\"created_at\":\"2020-04-29 18:57:10\"},\"collages\":[]},{\"id\":2,\"created_at\":\"2020-04-29 18:59:14\",\"url\":\"https://images.unsplash.com/photo-1577073315631-93a26e476fa4?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80\",\"title\":\"Darker\",\"user\":{\"id\":1,\"username\":\"Davis Wambugu\",\"email\":\"davis@email.com\",\"location\":\"Nairobi\",\"bio\":\"I am a photographer\",\"created_at\":\"2020-04-29 18:57:10\"},\"collages\":[{\"id\":2,\"title\":\"People\",\"pivot\":{\"collage_id\":2,\"photo_id\":2}},{\"id\":3,\"title\":\"Animals\",\"pivot\":{\"collage_id\":3,\"photo_id\":2}}]},{\"id\":3,\"created_at\":\"2020-04-29 19:03:15\",\"url\":\"https://images.unsplash.com/photo-1564553017457-1851a4c4ab8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=401&q=80\",\"title\":\"Sun\",\"user\":{\"id\":1,\"username\":\"Davis Wambugu\",\"email\":\"davis@email.com\",\"location\":\"Nairobi\",\"bio\":\"I am a photographer\",\"created_at\":\"2020-04-29 18:57:10\"},\"collages\":[]},{\"id\":7,\"created_at\":\"2020-04-29 19:41:46\",\"url\":\"https://images.unsplash.com/photo-1547962041-6d2d7c4bdf6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80\",\"title\":\"Selective Color\",\"user\":{\"id\":1,\"username\":\"Davis Wambugu\",\"email\":\"davis@email.com\",\"location\":\"Nairobi\",\"bio\":\"I am a photographer\",\"created_at\":\"2020-04-29 18:57:10\"},\"collages\":[]}]"
+						}
+					]
+				},
+				{
+					"name": "Fetch Highlight Photo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/photos/highlight",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"photos",
+								"highlight"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Fetch All Photos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/photos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"photos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1564"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Apr 2020 18:59:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[{\"id\":1,\"created_at\":\"2020-04-29 18:57:48\",\"url\":\"https://images.unsplash.com/photo-1529971071135-c1982792bb96?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80\",\"title\":\"Blue Skies\",\"user\":{\"id\":1,\"username\":\"Davis Wambugu\",\"email\":\"davis@email.com\",\"location\":\"Nairobi\",\"bio\":\"I am a photographer\",\"created_at\":\"2020-04-29 18:57:10\"},\"collages\":[]},{\"id\":2,\"created_at\":\"2020-04-29 18:59:14\",\"url\":\"https://images.unsplash.com/photo-1577073315631-93a26e476fa4?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80\",\"title\":\"Darker\",\"user\":{\"id\":1,\"username\":\"Davis Wambugu\",\"email\":\"davis@email.com\",\"location\":\"Nairobi\",\"bio\":\"I am a photographer\",\"created_at\":\"2020-04-29 18:57:10\"},\"collages\":[{\"id\":2,\"title\":\"People\",\"pivot\":{\"collage_id\":2,\"photo_id\":2}},{\"id\":3,\"title\":\"Animals\",\"pivot\":{\"collage_id\":3,\"photo_id\":2}}]},{\"id\":3,\"created_at\":\"2020-04-29 19:03:15\",\"url\":\"https://images.unsplash.com/photo-1564553017457-1851a4c4ab8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=401&q=80\",\"title\":\"Sun\",\"user\":{\"id\":1,\"username\":\"Davis Wambugu\",\"email\":\"davis@email.com\",\"location\":\"Nairobi\",\"bio\":\"I am a photographer\",\"created_at\":\"2020-04-29 18:57:10\"},\"collages\":[]},{\"id\":7,\"created_at\":\"2020-04-29 19:41:46\",\"url\":\"https://images.unsplash.com/photo-1547962041-6d2d7c4bdf6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80\",\"title\":\"Selective Color\",\"user\":{\"id\":1,\"username\":\"Davis Wambugu\",\"email\":\"davis@email.com\",\"location\":\"Nairobi\",\"bio\":\"I am a photographer\",\"created_at\":\"2020-04-29 18:57:10\"},\"collages\":[]}]"
+						},
+						{
+							"name": "Fetch All User Photos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/photos/user",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"photos",
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "952"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 30 Apr 2020 10:16:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[{\"id\":1,\"created_at\":\"2020-04-29 18:57:48\",\"url\":\"https://images.unsplash.com/photo-1529971071135-c1982792bb96?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80\",\"title\":\"Blue Skies\",\"collages\":[]},{\"id\":2,\"created_at\":\"2020-04-29 18:59:14\",\"url\":\"https://images.unsplash.com/photo-1577073315631-93a26e476fa4?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80\",\"title\":\"Darker\",\"collages\":[{\"id\":2,\"title\":\"People\",\"pivot\":{\"collage_id\":2,\"photo_id\":2}},{\"id\":3,\"title\":\"Animals\",\"pivot\":{\"collage_id\":3,\"photo_id\":2}}]},{\"id\":3,\"created_at\":\"2020-04-29 19:03:15\",\"url\":\"https://images.unsplash.com/photo-1564553017457-1851a4c4ab8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=401&q=80\",\"title\":\"Sun\",\"collages\":[]},{\"id\":7,\"created_at\":\"2020-04-29 19:41:46\",\"url\":\"https://images.unsplash.com/photo-1547962041-6d2d7c4bdf6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80\",\"title\":\"Selective Color\",\"collages\":[]}]"
+						}
+					]
+				},
+				{
+					"name": "Add New Photo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Bear",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"url\": \"https://images.unsplash.com/photo-1509099896299-af46ad97ff57?ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80\",\n\t\"title\": \"Sierra Leone\",\n\t\"description\": \"Took this on a trip to Kargi, a remote nomadic settlement in Kenya. It’s been a while since I got to experience a people so constantly happy and full of joy as the people of here.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/photos/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"photos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Photo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"url\": \"https://images.unsplash.com/photo-1529971071135-c1982792bb96?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80\",\n\t\"title\": \"Blue Skies\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/photos/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"photos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Photo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/photos/6",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"photos",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Photo by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/photos/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"photos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch All Photos Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/photos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"photos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Fetch All Photos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/photos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"photos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1564"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Apr 2020 18:59:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[{\"id\":1,\"created_at\":\"2020-04-29 18:57:48\",\"url\":\"https://images.unsplash.com/photo-1529971071135-c1982792bb96?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80\",\"title\":\"Blue Skies\",\"user\":{\"id\":1,\"username\":\"Davis Wambugu\",\"email\":\"davis@email.com\",\"location\":\"Nairobi\",\"bio\":\"I am a photographer\",\"created_at\":\"2020-04-29 18:57:10\"},\"collages\":[]},{\"id\":2,\"created_at\":\"2020-04-29 18:59:14\",\"url\":\"https://images.unsplash.com/photo-1577073315631-93a26e476fa4?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80\",\"title\":\"Darker\",\"user\":{\"id\":1,\"username\":\"Davis Wambugu\",\"email\":\"davis@email.com\",\"location\":\"Nairobi\",\"bio\":\"I am a photographer\",\"created_at\":\"2020-04-29 18:57:10\"},\"collages\":[{\"id\":2,\"title\":\"People\",\"pivot\":{\"collage_id\":2,\"photo_id\":2}},{\"id\":3,\"title\":\"Animals\",\"pivot\":{\"collage_id\":3,\"photo_id\":2}}]},{\"id\":3,\"created_at\":\"2020-04-29 19:03:15\",\"url\":\"https://images.unsplash.com/photo-1564553017457-1851a4c4ab8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=401&q=80\",\"title\":\"Sun\",\"user\":{\"id\":1,\"username\":\"Davis Wambugu\",\"email\":\"davis@email.com\",\"location\":\"Nairobi\",\"bio\":\"I am a photographer\",\"created_at\":\"2020-04-29 18:57:10\"},\"collages\":[]},{\"id\":7,\"created_at\":\"2020-04-29 19:41:46\",\"url\":\"https://images.unsplash.com/photo-1547962041-6d2d7c4bdf6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80\",\"title\":\"Selective Color\",\"user\":{\"id\":1,\"username\":\"Davis Wambugu\",\"email\":\"davis@email.com\",\"location\":\"Nairobi\",\"bio\":\"I am a photographer\",\"created_at\":\"2020-04-29 18:57:10\"},\"collages\":[]}]"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Collages",
+			"item": [
+				{
+					"name": "Fetch All Collages",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/collages",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"collages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Collage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Bear",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Culture\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/collages/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"collages",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Collage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Blue Skies\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/collages/6",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"collages",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Collage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/collages/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"collages",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Collage by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/collages/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"collages",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Tags",
+			"item": [
+				{
+					"name": "Fetch All Tags",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/tags",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"tags"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Tag",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Bear",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"photo_id\": 4,\n\t\"collage_id\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/tags/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"tags",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Tag",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"photo_id\": 3,\n\t\"collage_id\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/tags/5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"tags",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tag",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/tags/5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"tags",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Tag by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/tags/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"tags",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"davis@email.com\",\n\t\"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register New User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"John Adams\",\n\t\"email\": \"john@email.com\",\n\t\"password\": \"john\",\n\t\"location\": \"New York\",\n\t\"bio\": \"I am also a photographer\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/auth/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch User by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/auth/users/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Authenticated User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/auth/user",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"John Barry\",\n\t\"location\": \"New York\",\n\t\"bio\": \"I am also a photographer\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/users/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/users/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,7 +1,7 @@
 # Collage API
 APIS that serve CRUD operations to be consumed on this [repository](https://github.com/wambugudavis/collage-app)
 
-###Requirements
+### Requirements
 - Latest version of NodeJS
 
 ## Getting Started

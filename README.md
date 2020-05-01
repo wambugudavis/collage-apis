@@ -46,4 +46,4 @@ node ace --help
 
 ## API Specification
 
-> [Postman Collection](https://github.com/wambugudavis/smart-devices/blob/master/APISpec.md)
+> [Postman Collection](https://github.com/wambugudavis/collage-apis/blob/develop/Collage.postman_collection.json)

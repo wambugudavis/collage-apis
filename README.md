@@ -1,28 +1,49 @@
-# Adonis API application
+# Collage API
+APIS that serve CRUD operations to be consumed on this [repository](https://github.com/wambugudavis/collage-app)
 
-This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
+###Requirements
+- Latest version of NodeJS
 
-1. Bodyparser
-2. Authentication
-3. CORS
-4. Lucid ORM
-5. Migrations and seeds
+## Getting Started
+Clone the repository
+```
+git clone https://github.com/wambugudavis/collage-apis.git
+```
+Install AdonisJS CLI globally via ``npm``
+```
+npm i -g @adonisjs/cli
+```
 
-## Setup
-
-Use the adonis command to install the blueprint
-
+Copy the example env file and make the required configuration changes in the .env file for your development environment
 ```bash
-adonis new yardstick --api-only
+cp .env.example .env
 ```
 
-or manually clone the repo and then run `npm install`.
-
-
-### Migrations
-
-Run the following command to run startup migrations.
-
-```js
-adonis migration:run
+Generate a new application key
+```bash
+npx adonis key:generate
 ```
+
+Run migration and seeds
+```bash
+adonis migration:run --seed
+```
+
+Start the local development server
+```bash
+adonis serve --dev
+```
+
+Run tests
+```bash
+adonis test
+```
+
+  For more information run
+```bash
+node ace --help
+```
+
+## API Specification
+
+> [Postman Collection](https://github.com/wambugudavis/smart-devices/blob/master/APISpec.md)
